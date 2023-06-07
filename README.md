@@ -1,4 +1,4 @@
-# Book_DotNetCoreInRaspberryPi
+# Book_DotNetCoreRaspberryPi
 ラズベリーパイ上で.Net Coreを動作させる基本  
 
 ### .Net Coreによる Raspberry Pi プログラミング
