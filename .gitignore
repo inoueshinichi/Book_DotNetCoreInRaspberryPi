@@ -1,2 +1,4 @@
 # Directory
 .vs/
+*/obj/
+*/bin/
