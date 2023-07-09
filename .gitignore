@@ -1,4 +1,6 @@
-# Directory
+# Directories
 .vs/
-*/obj/
-*/bin/
+obj/
+bin/
+
+# Files
