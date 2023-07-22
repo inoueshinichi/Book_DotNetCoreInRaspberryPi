@@ -3,6 +3,12 @@
 using System;
 using System.Runtime.InteropServices;
 
+// WiringPI 
+// Official URL : http://wiringpi.com/reference/core-functions/
+// Note that only wiringPi pin 1 (BCM_GPIO 18) supports PWM output 
+// and only wiringPi pin 7 (BCM_GPIO 4) supports CLOCK output modes.
+
+
 namespace SoftPWMCtrlLED
 {
     class Program
