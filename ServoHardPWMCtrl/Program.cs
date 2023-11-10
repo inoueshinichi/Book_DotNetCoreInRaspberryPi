@@ -43,7 +43,7 @@ namespace ServoHardPWMCtrl
 
 
         // Pi Params
-        public const int PI_PWM_MODE_MS = 0;
+        public const int PI_PWM_MODE_MS = 0; // 0: MarkSpace, 1: Balance. サーボモータはMarkSpaceモードを利用する.
         public const int PI_PIN_OUTPUT = 2;
         public const int PI_HARD_PWM_GPIO_CH0 = 18;
         public const float PI_HARD_PWM_FREQ = 19.2f; // 19.2MHz

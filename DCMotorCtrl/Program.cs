@@ -12,8 +12,8 @@ class Program
     // PI
     public const int PI_PWM_MODE_MS = 0;
     public const int PI_PIN_OUTPUT = 1;
-    public const int PI_DGTL_GPIO_1 = 23;
-    public const int PI_DGTL_GPIO_2 = 24;
+    public const int PI_DGTL_GPIO_23 = 23;
+    public const int PI_DGTL_GPIO_24 = 24;
     public const int PI_PWM_GPIO_CH0 = 12; // 18;
     public const int PI_PWM_OUTPUT = 2;
 
@@ -57,36 +57,36 @@ class Program
     public static void testMotorCWCCW()
     {
         // GPIO23をOUTPUT(1)に設定する
-        pinMode(PI_DGTL_GPIO_1, PI_PIN_OUTPUT);
+        pinMode(PI_DGTL_GPIO_23, PI_PIN_OUTPUT);
 
         // GPIO24をOUTPUT(1)に設定する
-        pinMode(PI_DGTL_GPIO_2, PI_PIN_OUTPUT);
+        pinMode(PI_DGTL_GPIO_24, PI_PIN_OUTPUT);
 
         // 初期状態としてモーターを停止する(惰性)
-        digitalWrite(PI_DGTL_GPIO_1, MOTOR_INPUT);
-        digitalWrite(PI_DGTL_GPIO_2, MOTOR_INPUT);
+        digitalWrite(PI_DGTL_GPIO_23, MOTOR_INPUT);
+        digitalWrite(PI_DGTL_GPIO_24, MOTOR_INPUT);
 
         // モータを正転させる
-        digitalWrite(PI_DGTL_GPIO_1, MOTOR_OUTPUT);
-        digitalWrite(PI_DGTL_GPIO_2, MOTOR_INPUT);
+        digitalWrite(PI_DGTL_GPIO_23, MOTOR_OUTPUT);
+        digitalWrite(PI_DGTL_GPIO_24, MOTOR_INPUT);
 
         // 3秒待機
         Thread.Sleep(3000);
 
         // モーターのブレーキ
-        digitalWrite(PI_DGTL_GPIO_1, MOTOR_OUTPUT);
-        digitalWrite(PI_DGTL_GPIO_2, MOTOR_OUTPUT);
+        digitalWrite(PI_DGTL_GPIO_23, MOTOR_OUTPUT);
+        digitalWrite(PI_DGTL_GPIO_24, MOTOR_OUTPUT);
 
         // モータを逆転させる
-        digitalWrite(PI_DGTL_GPIO_1, MOTOR_INPUT);
-        digitalWrite(PI_DGTL_GPIO_2, MOTOR_OUTPUT);
+        digitalWrite(PI_DGTL_GPIO_23, MOTOR_INPUT);
+        digitalWrite(PI_DGTL_GPIO_24, MOTOR_OUTPUT);
 
         // 3秒待機
         Thread.Sleep(3000);
 
         // モーターを停止する(惰性)
-        digitalWrite(PI_DGTL_GPIO_1, MOTOR_INPUT);
-        digitalWrite(PI_DGTL_GPIO_2, MOTOR_INPUT);
+        digitalWrite(PI_DGTL_GPIO_23, MOTOR_INPUT);
+        digitalWrite(PI_DGTL_GPIO_24, MOTOR_INPUT);
 
     }
 
@@ -104,21 +104,21 @@ class Program
     public static void testMotorPWM()
     {
         // GPIO23をOUTPUT(1)に設定する
-        pinMode(PI_DGTL_GPIO_1, PI_PIN_OUTPUT);
+        pinMode(PI_DGTL_GPIO_23, PI_PIN_OUTPUT);
 
         // GPIO24をOUTPUT(1)に設定する
-        pinMode(PI_DGTL_GPIO_2, PI_PIN_OUTPUT);
+        pinMode(PI_DGTL_GPIO_24, PI_PIN_OUTPUT);
 
         // GPIO12をPWM_OUTPUT(2)に設定する
         pinMode(PI_PWM_GPIO_CH0, PI_PWM_OUTPUT);
 
         // 初期状態としてモーターを停止する(惰性)
-        digitalWrite(PI_DGTL_GPIO_1, MOTOR_INPUT);
-        digitalWrite(PI_DGTL_GPIO_2, MOTOR_INPUT);
+        digitalWrite(PI_DGTL_GPIO_23, MOTOR_INPUT);
+        digitalWrite(PI_DGTL_GPIO_24, MOTOR_INPUT);
 
         // モータを正転させる
-        digitalWrite(PI_DGTL_GPIO_1, MOTOR_OUTPUT);
-        digitalWrite(PI_DGTL_GPIO_2, MOTOR_INPUT);
+        digitalWrite(PI_DGTL_GPIO_23, MOTOR_OUTPUT);
+        digitalWrite(PI_DGTL_GPIO_24, MOTOR_INPUT);
 
         float percentage = 0.0f;
         float duty = 0.0f;
@@ -160,15 +160,15 @@ class Program
         Thread.Sleep(3000);
 
         // モーターのブレーキ
-        digitalWrite(PI_DGTL_GPIO_1, MOTOR_OUTPUT);
-        digitalWrite(PI_DGTL_GPIO_2, MOTOR_OUTPUT);
+        digitalWrite(PI_DGTL_GPIO_23, MOTOR_OUTPUT);
+        digitalWrite(PI_DGTL_GPIO_24, MOTOR_OUTPUT);
 
          // 3秒待機
         Thread.Sleep(3000);
 
         // モーターを停止する(惰性)
-        digitalWrite(PI_DGTL_GPIO_1, MOTOR_INPUT);
-        digitalWrite(PI_DGTL_GPIO_2, MOTOR_INPUT);
+        digitalWrite(PI_DGTL_GPIO_23, MOTOR_INPUT);
+        digitalWrite(PI_DGTL_GPIO_24, MOTOR_INPUT);
     }
 
 
