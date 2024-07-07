@@ -179,6 +179,12 @@ namespace ServoHardPWMCtrl
             duty = getPwmDuty(targetDegrees);
             pwmWrite(PI_HARD_PWM_GPIO_CH0, (int)duty);
             Console.WriteLine($"[Done] pwmWrite({PI_HARD_PWM_GPIO_CH0}, {(int)duty}) at {targetDegrees}[deg]");
+
+            // 戻す
+            targetDegrees = 0;
+            duty = getPwmDuty(targetDegrees);
+            pwmWrite(PI_HARD_PWM_GPIO_CH0, (int)duty);
+            Console.WriteLine($"[Done] pwmWrite({PI_HARD_PWM_GPIO_CH0}, {(int)duty}) at {targetDegrees}[deg]");
         }
     }
 }

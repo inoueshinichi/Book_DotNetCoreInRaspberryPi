@@ -20,7 +20,7 @@ namespace OnBoardLEDCtrl
             writer.Close();
 
             // LEDを点灯/消灯する
-            int count = 0
+            int count = 0;
             while (true)
             {
                 writer = new System.IO.StreamWriter("/sys/class/leds/led0/brightness");
